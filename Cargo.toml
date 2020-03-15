@@ -1,0 +1,23 @@
+[package]
+name = "ramus"
+version = "0.1.0"
+authors = ["Chase Wilson <contact@chasewilson.dev>"]
+edition = "2018"
+
+[features]
+default = ["regex"]
+regex = ["regex-syntax"]
+
+[dependencies.unicode-segmentation]
+version = "1.6.0"
+
+[dependencies.regex-syntax]
+version = "0.6.17"
+optional = true
+
+[[bench]]
+name = "logos_bench"
+harness = false
+
+[dev-dependencies.criterion]
+version = "0.3.1"
